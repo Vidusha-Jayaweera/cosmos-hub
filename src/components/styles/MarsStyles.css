@@ -1,0 +1,303 @@
+.mars-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.photos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mars {
+  width: 100%;
+  padding: 6rem 1rem;
+  background-color: #000;
+}
+
+/* steps bar styling */
+.steps {
+  max-width: 1500px;
+  margin: auto;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 3px 3px 10px 4px #ccc;
+}
+
+.steps > h4 {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.step-one {
+  margin-left: 5%;
+}
+
+.step-two {
+  margin-left: 25%;
+}
+
+.step-three {
+  margin-left: 52%;
+}
+
+/* selection area styling */
+.selection-area {
+  color: #000;
+  max-width: 1500px;
+  margin: auto;
+  display: grid;
+  grid-gap: 40px;
+  /* grid-template-rows: repeat(1, 1fc); */
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+/* date selection and check for photos button styling */
+.date-selection {
+  /* display: grid; */
+  width: fit-content;
+  margin-top: 5%;
+}
+
+.date-selection input {
+  width: 220px;
+}
+
+.date-selection form {
+  width: fit-content;
+}
+
+.date-selection > form > button {
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.rover-selection {
+  margin-top: 5%;
+}
+
+/* rover selection styling */
+.rover-descriptions {
+  width: 100%;
+  padding: 6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  margin-top: -10%;
+}
+
+.rover-descriptions > div > h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* had to use px instead of % here because the original images are different sizes to begin with */
+.rover-descriptions > div > img {
+  width: 150px;
+  height: 120px;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 15px 1px white;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.rover-descriptions > div > img:hover {
+  box-shadow: 0px 12px 22px 1px #333;
+  transform: scale(1.2);
+}
+
+.rover-descriptions > div > p {
+  font-size: 0.9rem;
+  margin: 0px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.rover-descriptions > div > h6 {
+  font-size: 1.1rem;
+  margin: 0px;
+  /* font-family: cardo, sans-serif; */
+  text-align: center;
+  margin-top: 7%;
+  margin-left: 0%;
+  padding: 10px;
+  color: white;
+}
+
+.highlight-rover {
+  border: 1rem outset snow;
+}
+
+.img-normal-opacity {
+  opacity: 0.2;
+}
+
+/* retrieve-photos button styling */
+.retrieve-photos {
+  /* grid-area: retrieve; */
+  margin: 5% 0 0 auto;
+}
+
+.retrieve-photos .btn-primary {
+  font-size: 1rem;
+}
+
+/* loaded gallery styling */
+.loaded-photos {
+  background-color: white;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 175px);
+  grid-auto-rows: 175px;
+  grid-auto-flow: dense;
+  margin-left: 2%;
+}
+
+.loaded-photos .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background-color: red; /* Red background color */
+  border: none;
+  border-radius: 50%; /* Makes the button circular */
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* White icon color */
+}
+
+.loaded-photos .close-button:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+.item {
+  font-family: oswald, sans-serif;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.item img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item img:hover {
+  transform: scale(1.2);
+}
+.item__overlay {
+  background: #ffc60032;
+  grid-column: 1 / -1;
+  grid-row: 1/ -1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transition: 0.2s;
+  transform: translateY(100%);
+}
+.item__overlay button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.item:hover .item__overlay {
+  transform: translateY(0);
+}
+.item.v2 {
+  grid-row: span 2;
+}
+.item.v3 {
+  grid-row: span 3;
+}
+.item.v4 {
+  grid-row: span 4;
+}
+.item.h2 {
+  grid-column: span 2;
+}
+.item.h3 {
+  grid-column: span 3;
+}
+.item.h4 {
+  grid-column: span 4;
+}
+.overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.overlay.open {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.overlay-inner {
+  background: white;
+  width: 700px;
+  padding: 20px;
+}
+.overlay img {
+  width: 75%;
+  height: 75%;
+  /* margin-top: 5%; */
+}
+
+.overlay button {
+  background: #ffc60032;
+  border: 2px solid white;
+  color: white;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 5%;
+}
+.close-button {
+  margin-top: 1%;
+}
+/* had to use px for next & prev buttons because % doesn't stablize height when screen size moves */
+.next-button {
+  margin-left: 80%;
+  margin-top: 80px;
+}
+.prev-button {
+  margin-left: -70%;
+  margin-top: -450px;
+}
+.overlay h4 {
+  margin-bottom: 1%;
+  color: white;
+}

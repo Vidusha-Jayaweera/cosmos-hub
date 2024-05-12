@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MarsGenerator> should render component 1`] = `
+<div
+  className="mars"
+>
+  <div
+    className="steps"
+  >
+    <h4
+      className="step-one"
+    >
+      Step 1: Select Date
+    </h4>
+    <h4
+      className="step-two"
+    >
+      Step 2: Choose your Rover
+    </h4>
+    <h4
+      className="step-three"
+    >
+      Step 3: Retrieve Photos
+    </h4>
+  </div>
+  <div
+    className="selection-area"
+  >
+    <div
+      className="date-selection"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          name="dateTaken"
+          onChange={[Function]}
+          type="date"
+          value="2015-02-15"
+        />
+        <div />
+        <button
+          className="btn btn-primary"
+        >
+          Check for Photos
+        </button>
+      </form>
+    </div>
+    <div
+      className="rover-selection"
+    />
+    <div
+      className="retrieve-photos"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <button
+          className="btn btn-primary"
+          hidden={true}
+        >
+          Retrieve Photos
+        </button>
+      </form>
+    </div>
+  </div>
+  <br />
+  <div
+    className="loaded-photos"
+  />
+</div>
+`;
